@@ -1,11 +1,11 @@
 {
-  "name": "mln111-project",
-  "version": "1.0.0",
-  "description": "AI & Human: Dialectical Future website",
-  "scripts": {
-    "start": "http-server . -o code.html -c-1"
-  },
-  "devDependencies": {
-    "http-server": "^14.1.1"
-  }
+    "name": "mln111-project",
+    "version": "1.0.0",
+    "description": "AI & Human: Dialectical Future website",
+    "scripts": {
+        "start": "http-server . -o index.html -c-1"
+    },
+    "devDependencies": {
+        "http-server": "^14.1.1"
+    }
 }
