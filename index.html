@@ -5,81 +5,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI & Con người: Tương lai Biện chứng</title>
+
     <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Space+Mono&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono&display=swap"
         rel="stylesheet">
+
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
         rel="stylesheet" />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Background Elements -->
+    <!-- Ambient Background -->
+    <div class="bg-noise"></div>
     <div class="grid-bg"></div>
-    <div class="glow-orb" style="top: 10%; left: 20%; background: var(--primary-color); width: 400px; height: 400px;">
+    <div class="glow-orb"
+        style="top: -10%; left: -10%; background: var(--primary-color); width: 600px; height: 600px; opacity: 0.15;">
     </div>
     <div class="glow-orb"
-        style="bottom: 20%; right: 10%; background: var(--secondary-color); width: 500px; height: 500px; animation-delay: -5s;">
+        style="bottom: 10%; right: -5%; background: var(--secondary-color); width: 700px; height: 700px; animation-delay: -5s; opacity: 0.15;">
+    </div>
+    <div class="glow-orb"
+        style="top: 40%; left: 40%; background: var(--tertiary-color); width: 400px; height: 400px; animation-delay: -10s; opacity: 0.1;">
     </div>
 
     <!-- Navigation -->
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <span class="material-symbols-outlined text-neon">psychology</span>
-                    DIALECTIC.AI
-                </div>
-                <div class="nav-links">
-                    <a href="#intro">Bối cảnh</a>
-                    <a href="#theory">Lý luận</a>
-                    <a href="#laws">Ba Quy Luật</a>
-                    <a href="#policy">Hành động</a>
-                </div>
-            </nav>
-        </div>
+    <header id="main-header">
+        <nav>
+            <div class="logo">
+                <span class="material-symbols-outlined text-neon-cyan">psychology</span>
+                MLN111
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <div class="nav-links">
+                <a href="#intro">Bối cảnh</a>
+                <a href="#theory">Lý luận</a>
+                <a href="#laws">Ba Quy Luật</a>
+                <a href="#policy">Hành động</a>
+            </div>
+        </nav>
     </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#intro" class="menu-link">Bối cảnh</a>
+        <a href="#theory" class="menu-link">Lý luận</a>
+        <a href="#laws" class="menu-link">Ba Quy Luật</a>
+        <a href="#policy" class="menu-link">Hành động</a>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <span class="tagline">Phép biện chứng thế kỷ 21</span>
+        <div class="hero-content reveal">
+            <span class="mono-tag">Phép biện chứng thế kỷ 21</span>
             <h1>
                 AI & CON NGƯỜI<br>
-                <span class="text-neon">ĐỐI TÁC HAY ĐỐI THỦ?</span>
+                <span class="text-gradient">ĐỐI TÁC</span> HAY <span class="text-neon-cyan">ĐỐI THỦ?</span>
             </h1>
-            <p style="margin: 2rem 0; font-size: 1.2rem;">
+            <p style="margin: 2rem 0; font-size: 1.25rem; max-width: 700px; margin-left: auto; margin-right: auto;">
                 Giải mã mối quan hệ giữa "Người sáng tạo" và "Công cụ" dưới lăng kính của Phép biện chứng duy vật.
                 Một cái nhìn thấu đáo về tương lai lao động và cấu trúc xã hội.
             </p>
-            <a href="#intro" class="cta-button">Khám phá ngay</a>
+            <a href="#intro" class="cta-button">
+                Khám phá ngay
+                <span class="material-symbols-outlined">arrow_downward</span>
+            </a>
+        </div>
+
+        <div class="scroll-indicator">
+            <span class="material-symbols-outlined">expand_more</span>
         </div>
     </section>
 
     <!-- Section 1: Intro/Context -->
     <section id="intro">
         <div class="container">
-            <div class="glass-panel">
+            <div class="glass-panel reveal">
                 <div class="grid-2" style="align-items: center;">
                     <div>
-                        <h2>Bối cảnh Lịch sử</h2>
+                        <h2 class="text-gradient">Bối cảnh Lịch sử</h2>
                         <p>Chúng ta đang sống trong giai đoạn lịch sử đầy biến động. Ranh giới bản thể luận giữa "người
                             sáng tạo" và "công cụ" chưa bao giờ mờ nhạt đến thế.</p>
                         <p>Khác với các cuộc cách mạng công nghiệp trước – nơi máy móc thay thế <strong>lao động cơ
                                 bắp</strong>, cuộc cách mạng lần thứ tư chứng kiến sự xâm nhập của máy móc vào lãnh địa
-                            thiêng liêng nhất: <strong>Tư duy và Sáng tạo</strong>.</p>
-                        <div style="margin-top: 1rem; padding-left: 1rem; border-left: 2px solid var(--primary-color);">
-                            <p class="text-neon" style="font-style: italic;">"AI và con người – đối tác hay đối trí?"
-                            </p>
+                            thiêng liêng nhất: <strong class="text-neon-cyan">Tư duy và Sáng tạo</strong>.</p>
+                        <div
+                            style="margin-top: 2rem; border-left: 2px solid var(--primary-color); padding-left: 1.5rem;">
+                            <p class="text-neon-cyan" style="font-family: var(--font-mono); margin: 0;">"AI giải phóng
+                                con người khỏi ràng buộc sinh học hay biến chúng ta thành những 'công nhân ma' phục vụ
+                                thuật toán?"</p>
                         </div>
                     </div>
-                    <div style="text-align: center;">
-                        <span class="material-symbols-outlined"
-                            style="font-size: 15rem; opacity: 0.2;">history_edu</span>
+                    <div style="display: flex; justify-content: center;">
+                        <!-- Abstract Visual -->
+                        <div style="position: relative; width: 300px; height: 300px;">
+                            <div
+                                style="position: absolute; inset: 0; border: 1px solid rgba(255,255,255,0.1); border-radius: 50%; animation: spin 20s linear infinite;">
+                            </div>
+                            <div
+                                style="position: absolute; inset: 20px; border: 1px dashed rgba(0, 240, 255, 0.3); border-radius: 50%; animation: spin 15s linear infinite reverse;">
+                            </div>
+                            <span class="material-symbols-outlined"
+                                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 8rem; opacity: 0.8; color: var(--text-secondary);">history_edu</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -89,129 +130,149 @@
     <!-- Section 2: Theory Basis -->
     <section id="theory">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 4rem;">
-                <span class="tagline">Cơ sở lý luận</span>
+            <div style="text-align: center; margin-bottom: 5rem;" class="reveal">
+                <span class="mono-tag">Cơ sở lý luận</span>
                 <h2>Phép Biện chứng Duy vật</h2>
                 <p>Công cụ sắc bén nhất để phân tích sự vận động của thế giới.</p>
             </div>
 
             <div class="grid-3">
-                <div class="glass-panel law-card">
-                    <span class="material-symbols-outlined law-icon">fingerprint</span>
+                <div class="glass-panel reveal">
+                    <span class="material-symbols-outlined text-neon-cyan"
+                        style="font-size: 3rem; margin-bottom: 1rem;">fingerprint</span>
                     <h3>Bản chất Con người</h3>
                     <p>Con người là "tổng hòa những quan hệ xã hội". Lao động là phương thức tồn tại giúp con người kiến
-                        tạo chính mình.</p>
+                        tạo chính mình. Con người là sự thống nhất biện chứng giữa mặt sinh học và mặt xã hội.</p>
                 </div>
-                <div class="glass-panel law-card">
-                    <span class="material-symbols-outlined law-icon">smart_toy</span>
+                <div class="glass-panel reveal" style="transition-delay: 0.1s;">
+                    <span class="material-symbols-outlined text-neon-purple"
+                        style="font-size: 3rem; margin-bottom: 1rem;">smart_toy</span>
                     <h3>Bản chất AI</h3>
-                    <p>Dù thông minh đến đâu, AI vẫn là "tư liệu sản xuất", là lao động quá khứ được vật hóa. AI không
-                        phải là chủ thể lịch sử ngang hàng.</p>
+                    <p>AI dù thông minh nhưng bản chất vẫn là "tư liệu sản xuất", là <strong>lao động quá khứ được vật
+                            hóa</strong>. AI không phải là chủ thể lịch sử ngang hàng với con người.</p>
                 </div>
-                <div class="glass-panel law-card">
-                    <span class="material-symbols-outlined law-icon">schema</span>
+                <div class="glass-panel reveal" style="transition-delay: 0.2s;">
+                    <span class="material-symbols-outlined text-neon-red"
+                        style="font-size: 3rem; margin-bottom: 1rem;">schema</span>
                     <h3>Cách tiếp cận</h3>
-                    <p>Không nhìn nhận tĩnh tại mà xem xét trong sự vận động liên tục, chi phối bởi ba quy luật cơ bản
-                        của phép biện chứng.</p>
+                    <p>Không nhìn nhận tĩnh tại mà xem xét trong sự vận động liên tục, chi phối bởi ba quy luật cơ bản:
+                        <strong>Mâu thuẫn</strong>, <strong>Lượng - Chất</strong>, và <strong>Phủ định của Phủ
+                            định</strong>.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="section-divider"></div>
+    <div
+        style="height: 1px; width: 100%; background: linear-gradient(90deg, transparent, var(--glass-border), transparent);">
+    </div>
 
     <!-- Section 3: The Laws -->
     <section id="laws">
         <div class="container">
+
             <!-- Law 1: Unity & Struggle -->
-            <div style="margin-bottom: 8rem;">
-                <h2 class="text-neon">01. Quy luật Mâu thuẫn</h2>
-                <p class="text-secondary" style="font-size: 1.2rem; margin-bottom: 2rem;">Thống nhất và Đấu tranh giữa
-                    các mặt đối lập.</p>
+            <div style="margin-bottom: 10rem;">
+                <div class="reveal" style="margin-bottom: 3rem;">
+                    <h2 class="text-neon-cyan">01. Quy luật Mâu thuẫn</h2>
+                    <p class="text-secondary" style="font-size: 1.2rem;">Thống nhất và Đấu tranh giữa các mặt đối lập:
+                        Nguồn gốc của sự phát triển.</p>
+                </div>
 
                 <div class="grid-2">
-                    <div class="glass-panel" style="border-color: rgba(0, 255, 157, 0.3);">
-                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                    <div class="glass-panel reveal" style="border-color: rgba(0, 255, 157, 0.2);">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
                             <span class="material-symbols-outlined"
-                                style="color: var(--accent-green); font-size: 2rem;">handshake</span>
-                            <h3 style="margin:0; color: var(--accent-green);">Mặt Thống nhất (Đối tác)</h3>
+                                style="color: var(--accent-green); font-size: 2.5rem;">handshake</span>
+                            <h3 style="margin:0; color: var(--accent-green);">Thống nhất (Đối tác)</h3>
                         </div>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 1rem; display: flex; gap: 0.5rem;">
-                                <span class="material-symbols-outlined"
-                                    style="font-size: 1.2rem; color: var(--accent-green);">check_circle</span>
-                                <div>
-                                    <strong>Mô hình Nhân mã (Centaur):</strong> Kết hợp trực giác con người + tính toán
-                                    của máy móc = Sức mạnh vượt trội.
-                                </div>
-                            </li>
-                            <li style="margin-bottom: 1rem; display: flex; gap: 0.5rem;">
-                                <span class="material-symbols-outlined"
-                                    style="font-size: 1.2rem; color: var(--accent-green);">check_circle</span>
-                                <div>
-                                    <strong>Mở rộng sáng tạo:</strong> AI là "người đồng sáng tạo", giải phóng con người
-                                    khỏi "bao hình trắng" (blank page).
-                                </div>
-                            </li>
-                        </ul>
+                        <p style="margin-bottom: 2rem;">AI là công cụ mở rộng, cộng sinh (Symbiosis).</p>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <h4 style="color: white; margin-bottom: 0.5rem;">Mô hình Nhân mã (Centaur)</h4>
+                            <p style="font-size: 0.95rem;">Kết hợp trực giác con người + tính toán của máy móc = Sức
+                                mạnh vượt trội.</p>
+                        </div>
+
+                        <div>
+                            <h4 style="color: white; margin-bottom: 0.5rem;">Đồng sáng tạo (Co-creators)</h4>
+                            <p style="font-size: 0.95rem;">Generative AI giúp hiện thực hóa ý tưởng nhanh chóng, vượt
+                                qua "trang giấy trắng".</p>
+                        </div>
                     </div>
 
-                    <div class="glass-panel" style="border-color: rgba(255, 51, 102, 0.3);">
-                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                    <div class="glass-panel reveal"
+                        style="border-color: rgba(255, 0, 85, 0.2); transition-delay: 0.2s;">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
                             <span class="material-symbols-outlined"
-                                style="color: var(--accent-red); font-size: 2rem;">swords</span>
-                            <h3 style="margin:0; color: var(--accent-red);">Mặt Đấu tranh (Đối thủ)</h3>
+                                style="color: var(--tertiary-color); font-size: 2.5rem;">swords</span>
+                            <h3 style="margin:0; color: var(--tertiary-color);">Đấu tranh (Đối thủ)</h3>
                         </div>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 1rem; display: flex; gap: 0.5rem;">
-                                <span class="material-symbols-outlined"
-                                    style="font-size: 1.2rem; color: var(--accent-red);">warning</span>
-                                <div>
-                                    <strong>Sự thay thế:</strong> AI với chi phí thấp đe dọa việc làm, tạo ra "đội quân
-                                    dự bị lao động".
-                                </div>
-                            </li>
-                            <li style="margin-bottom: 1rem; display: flex; gap: 0.5rem;">
-                                <span class="material-symbols-outlined"
-                                    style="font-size: 1.2rem; color: var(--accent-red);">warning</span>
-                                <div>
-                                    <strong>Sự tha hóa:</strong> Hiện tượng "Lao động ma" (Ghost Work), con người phục
-                                    vụ máy móc dưới sự quản lý của thuật toán.
-                                </div>
-                            </li>
-                        </ul>
+                        <p style="margin-bottom: 2rem;">AI là lực lượng xa lạ trong quan hệ sản xuất tư bản.</p>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <h4 style="color: white; margin-bottom: 0.5rem;">Sự thay thế & Lao động Ma</h4>
+                            <p style="font-size: 0.95rem;">AI tạo ra "đội quân dự bị lao động", trong khi con người thực
+                                hiện các tác vụ ẩn để phục vụ thuật toán.</p>
+                        </div>
+
+                        <div>
+                            <h4 style="color: white; margin-bottom: 0.5rem;">Phong kiến Công nghệ</h4>
+                            <p style="font-size: 0.95rem;">Mâu thuẫn giữa dữ liệu xã hội hóa và sự chiếm hữu tư nhân của
+                                các tập đoàn Big Tech.</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Law 2: Quantity to Quality -->
-            <div style="margin-bottom: 8rem;">
-                <h2 class="text-neon">02. Lượng đổi - Chất đổi</h2>
-                <div class="glass-panel" style="padding: 3rem;">
+            <div style="margin-bottom: 10rem;">
+                <div class="reveal">
+                    <h2 class="text-neon-cyan">02. Lượng đổi - Chất đổi</h2>
+                </div>
+
+                <div class="glass-panel reveal" style="padding: 4rem;">
                     <div class="grid-2" style="align-items: center;">
                         <div>
-                            <h3>Cơ chế vận động</h3>
-                            <div style="margin-bottom: 2rem;">
-                                <h4 style="margin-bottom: 0.5rem;">Tích lũy về Lượng</h4>
-                                <p>Sự gia tăng khổng lồ của Dữ liệu (Big Data), Sức mạnh tính toán (Compute) và Số lượng
-                                    tham số (Parameters).</p>
+                            <h3 style="margin-bottom: 2rem;">Cơ chế vận động của Cách mạng AI</h3>
+
+                            <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+                                <div style="width: 4px; background: var(--text-muted); border-radius: 2px;"></div>
+                                <div>
+                                    <h4 style="margin-bottom: 0.5rem;">Tích lũy về Lượng</h4>
+                                    <p>Sự gia tăng khổng lồ của Big Data, Compute và Parameters.</p>
+                                </div>
                             </div>
-                            <div>
-                                <h4 style="margin-bottom: 0.5rem; color: var(--primary-color);">Bước nhảy vọt về Chất
-                                </h4>
-                                <p>Hiện tượng <strong>"Khả năng nổi trội" (Emergent Abilities)</strong>. AI không chỉ
-                                    bắt chước mà có khả năng suy luận, làm toán, viết mã - những thứ không được lập
-                                    trình trực tiếp.</p>
+
+                            <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+                                <div
+                                    style="width: 4px; background: var(--primary-color); border-radius: 2px; box-shadow: 0 0 10px var(--primary-color);">
+                                </div>
+                                <div>
+                                    <h4 style="margin-bottom: 0.5rem; color: var(--primary-color);">Bước nhảy vọt về
+                                        Chất</h4>
+                                    <p>Hiện tượng <strong>"Khả năng nổi trội" (Emergent Abilities)</strong>. AI chuyển
+                                        từ xử lý thông tin sang <strong>tạo sinh tri thức</strong>.</p>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; gap: 1rem;">
+                                <div style="width: 4px; background: var(--text-muted); border-radius: 2px;"></div>
+                                <div>
+                                    <h4 style="margin-bottom: 0.5rem;">Hệ quả xã hội</h4>
+                                    <p>Phân cực kỹ năng: Kỹ năng cũ mất giá, AI Literacy trở thành thước đo mới cho "vốn
+                                        nhân lực".</p>
+                                </div>
                             </div>
                         </div>
+
                         <div style="text-align: center; position: relative;">
-                            <!-- Simple Visualization -->
-                            <div
-                                style="width: 200px; height: 200px; border-radius: 50%; border: 2px dashed var(--primary-color); position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); animation: spin 10s linear infinite;">
-                            </div>
-                            <span class="material-symbols-outlined"
-                                style="font-size: 8rem; color: white;">rocket_launch</span>
-                            <p style="margin-top: 1rem; font-family: 'Space Mono';">SCALING LAWS</p>
+                            <!-- Visualization -->
+                            <span class="material-symbols-outlined text-neon-cyan"
+                                style="font-size: 8rem;">rocket_launch</span>
+                            <p style="margin-top: 2rem; font-family: var(--font-mono); letter-spacing: 0.2em;">SCALING
+                                LAWS</p>
                         </div>
                     </div>
                 </div>
@@ -219,38 +280,45 @@
 
             <!-- Law 3: Negation of Negation -->
             <div>
-                <h2 class="text-neon">03. Phủ định của phủ định</h2>
-                <p style="margin-bottom: 3rem;">Lịch sử phát triển theo đường xoắn ốc đi lên.</p>
+                <div class="reveal" style="text-align: center; margin-bottom: 5rem;">
+                    <h2 class="text-neon-cyan">03. Phủ định của phủ định</h2>
+                    <p>Lịch sử phát triển theo đường xoắn ốc đi lên, hướng tới xã hội hậu lao động.</p>
+                </div>
 
                 <div class="timeline">
                     <!-- Item 1 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker">1</div>
                         <div class="timeline-content">
                             <h3>Cái Khẳng định (Thesis)</h3>
-                            <p><strong>Lao động Thủ công:</strong> Con người làm chủ hoàn toàn nhưng năng suất thấp,
-                                giới hạn sinh học.</p>
+                            <p class="text-muted">Lao động Thủ công & Trí óc Độc lập</p>
+                            <p>Con người làm chủ hoàn toàn nhưng năng suất thấp, bị giới hạn bởi năng lực sinh học.</p>
                         </div>
                     </div>
+
                     <!-- Item 2 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"
-                            style="background: var(--accent-red); border-color: var(--accent-red);"></div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker"
+                            style="border-color: var(--tertiary-color); color: var(--tertiary-color); box-shadow: 0 0 15px rgba(255, 0, 85, 0.3);">
+                            2</div>
                         <div class="timeline-content">
-                            <h3>Cái Phủ định (Antithesis)</h3>
-                            <p><strong>Tự động hóa & AI:</strong> Máy móc tước đoạt kỹ năng (deskilling). Con người bị
-                                thay thế, rơi vào tha hóa.</p>
+                            <h3 style="color: var(--tertiary-color);">Cái Phủ định (Antithesis)</h3>
+                            <p class="text-muted">Tự động hóa & AI</p>
+                            <p>Máy móc tước đoạt kỹ năng. Con người bị thay thế, bị tha hóa. Mâu thuẫn "đối thủ" bộc lộ
+                                gay gắt.</p>
                         </div>
                     </div>
+
                     <!-- Item 3 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"
-                            style="background: var(--primary-color); border-color: var(--primary-color); box-shadow: 0 0 15px var(--primary-color);">
-                        </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker"
+                            style="border-color: var(--secondary-color); color: var(--secondary-color); box-shadow: 0 0 20px rgba(112, 0, 255, 0.5); background: var(--secondary-color); color: white;">
+                            3</div>
                         <div class="timeline-content">
-                            <h3 class="text-neon">Phủ định của Phủ định (Synthesis)</h3>
-                            <p><strong>Symbiotic Mastery:</strong> Con người quay lại làm chủ ở trình độ cao hơn ("Siêu
-                                nhân mã"). Lao động sáng tạo, định hướng và đạo đức.</p>
+                            <h3 class="text-neon-purple">Synthesis (Tổng hợp)</h3>
+                            <p class="text-muted">Symbiotic Mastery (Siêu Nhân Mã)</p>
+                            <p>Con người tái khẳng định vai trò chủ thể ở trình độ cao hơn. Lao động chuyển sang định
+                                hướng và sáng tạo giá trị nhân văn.</p>
                         </div>
                     </div>
                 </div>
@@ -259,81 +327,79 @@
         </div>
     </section>
 
-    <!-- Section: Policy & Vietnam -->
-    <section id="policy" style="background: rgba(0,0,0,0.5);">
+    <!-- Policy Section -->
+    <section id="policy" style="position: relative;">
+        <!-- Darker BG for contrast -->
+        <div
+            style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8)); z-index: -1;">
+        </div>
+
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 3rem;">Góc nhìn cho Việt Nam</h2>
+            <div class="reveal" style="text-align: center; margin-bottom: 4rem;">
+                <h2 style="margin-bottom: 1rem;">Góc nhìn chính sách cho Việt Nam</h2>
+                <p style="max-width: 700px; margin: 0 auto;">Chủ động tham gia CMCN 4.0. Giải quyết mâu thuẫn giữa Lực
+                    lượng sản xuất và Quan hệ sản xuất.</p>
+            </div>
 
             <div class="grid-3">
-                <div class="glass-panel">
+                <div class="glass-panel reveal">
                     <span class="material-symbols-outlined"
-                        style="font-size: 2.5rem; color: #ffeb3b; margin-bottom: 1rem;">lightbulb</span>
+                        style="font-size: 2.5rem; color: #ffeb3b; margin-bottom: 1.5rem;">lightbulb</span>
                     <h4>Giáo dục & Đào tạo</h4>
-                    <p>Chuyển từ truyền thụ kiến thức sang phát triển tư duy sáng tạo, phản biện. Đào tạo lại
-                        (Reskilling) để tạo ra thế hệ "lao động nhân mã".</p>
+                    <p style="font-size: 0.95rem;">Chuyển từ truyền thụ kiến thức sang tư duy sáng tạo. Thúc đẩy
+                        <strong>Reskilling</strong> để tạo ra thế hệ lao động làm chủ công nghệ.
+                    </p>
                 </div>
-                <div class="glass-panel">
+                <div class="glass-panel reveal" style="transition-delay: 0.1s;">
                     <span class="material-symbols-outlined"
-                        style="font-size: 2.5rem; color: #4fc3f7; margin-bottom: 1rem;">security</span>
+                        style="font-size: 2.5rem; color: #4fc3f7; margin-bottom: 1.5rem;">security</span>
                     <h4>An sinh Xã hội</h4>
-                    <p>Bảo vệ quyền lợi cho lao động nền tảng ("ghost workers"). Nghiên cứu các mô hình an sinh mới như
-                        UBI để phân phối lại lợi ích AI.</p>
+                    <p style="font-size: 0.95rem;">Bảo vệ quyền lợi cho lao động nền tảng. Nghiên cứu mô hình
+                        <strong>UBI</strong> (Thu nhập cơ bản) để phân phối lại lợi ích từ AI.
+                    </p>
                 </div>
-                <div class="glass-panel">
+                <div class="glass-panel reveal" style="transition-delay: 0.2s;">
                     <span class="material-symbols-outlined"
-                        style="font-size: 2.5rem; color: #81c784; margin-bottom: 1rem;">database</span>
-                    <h4>Chủ quyền Dữ liệu</h4>
-                    <p>Khẳng định dữ liệu là tài nguyên quốc gia. Khuyến khích mô hình AI mã nguồn mở để phá vỡ thế độc
-                        quyền công nghệ.</p>
+                        style="font-size: 2.5rem; color: #81c784; margin-bottom: 1.5rem;">database</span>
+                    <h4>Công nghệ & Dữ liệu</h4>
+                    <p style="font-size: 0.95rem;">Khẳng định <strong>Chủ quyền Dữ liệu</strong>. Khuyến khích AI mã
+                        nguồn mở để phá vỡ thế độc quyền "phong kiến công nghệ".</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Conclusion Quote -->
+    <!-- Summary Table -->
     <section>
-        <div class="container" style="text-align: center;">
-            <p style="font-size: 1.5rem; max-width: 800px; margin: 0 auto; color: var(--text-secondary);">
-                "Sự phát triển của AI không phải là định mệnh bi quan về sự diệt vong, mà là cơ hội để con người thực
-                hiện bước nhảy vọt từ
-                <span class="text-neon">vương quốc của sự tất yếu</span> sang <span class="text-neon">vương quốc của sự
-                    tự do</span>."
-            </p>
-        </div>
-    </section>
-
-    <!-- Summary Table Section -->
-    <section>
-        <div class="container">
+        <div class="container reveal">
             <h3>Tổng hợp Phân tích Biện chứng</h3>
             <div style="overflow-x: auto;">
-                <table class="data-table">
+                <table class="modern-table">
                     <thead>
                         <tr>
-                            <th>Quy luật Biện chứng</th>
+                            <th>Quy luật</th>
                             <th>Biểu hiện quan hệ AI - Con người</th>
-                            <th>Xu hướng và Chính sách</th>
+                            <th>Hàm ý Chính sách</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Thống nhất & Đấu tranh</strong></td>
+                            <td>Thống nhất & Đấu tranh</td>
                             <td>
-                                <div><span class="text-neon">Thống nhất:</span> Mô hình "Nhân mã", tăng năng suất.</div>
-                                <div style="margin-top: 0.5rem;"><span style="color: var(--accent-red);">Đấu
-                                        tranh:</span> Thay thế việc làm, tha hóa lao động.</div>
+                                <div><span class="text-neon-cyan">Thống nhất:</span> Nhân mã, đồng sáng tạo.</div>
+                                <div style="margin-top: 0.5rem;"><span class="text-neon-red">Đấu tranh:</span> Thay thế,
+                                    lao động ma.</div>
                             </td>
-                            <td>Thúc đẩy cộng tác. Bảo vệ người lao động khỏi thuật toán.</td>
+                            <td>Thúc đẩy cộng tác. Bảo vệ người lao động.</td>
                         </tr>
                         <tr>
-                            <td><strong>Lượng - Chất</strong></td>
+                            <td>Lượng - Chất</td>
                             <td>Tích lũy Big Data/Compute -> Nhảy vọt về khả năng suy luận (Emergent Abilities).</td>
-                            <td>Reskilling để tương thích với "chất" mới. Giáo dục tư duy sáng tạo.</td>
+                            <td>Reskilling. Giáo dục tư duy sáng tạo.</td>
                         </tr>
                         <tr>
-                            <td><strong>Phủ định của Phủ định</strong></td>
-                            <td>AI phủ định kỹ năng cũ -> Con người tái khẳng định vai trò chủ thể ở trình độ cao hơn.
-                            </td>
+                            <td>Phủ định của Phủ định</td>
+                            <td>AI phủ định kỹ năng cũ -> Con người tái khẳng định vai trò chủ thể (Synthesis).</td>
                             <td>Xã hội hóa AI. Chuẩn bị cho kỷ nguyên "hậu lao động".</td>
                         </tr>
                     </tbody>
@@ -342,24 +408,194 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>© 2026 Dự án Triết học & Công nghệ. Xây dựng dựa trên lăng kính Biện chứng Duy vật.</p>
+    <!-- Appendix: AI Transparency & Integrity -->
+    <section id="appendix">
+        <div class="container reveal">
+            <h2 class="text-gradient" style="margin-bottom: 3rem;">Phụ lục: Liêm chính Học thuật</h2>
+
+            <!-- 1. Transparency Log -->
+            <div class="glass-panel" style="margin-bottom: 4rem;">
+                <h3 style="margin-bottom: 2rem;">1. Bảng kê khai minh bạch (AI Transparency Log)</h3>
+                <div style="overflow-x: auto;">
+                    <table class="modern-table">
+                        <thead>
+                            <tr>
+                                <th>Công cụ AI</th>
+                                <th>Mục đích</th>
+                                <th>Prompt chính</th>
+                                <th>Kết quả (Output)</th>
+                                <th>Chỉnh sửa (Human Edit)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Gemini / ChatGPT</td>
+                                <td>Phân tích lý thuyết & Ý tưởng</td>
+                                <td>"Vận dụng 3 quy luật phép biện chứng duy vật phân tích quan hệ AI - Con người"</td>
+                                <td>Phân tích Lượng-Chất, Mâu thuẫn, Phủ định.</td>
+                                <td>
+                                    <ul style="padding-left: 1rem; margin: 0;">
+                                        <li>Đối chiếu Giáo trình Triết học Mác-Lênin.</li>
+                                        <li>Thêm ví dụ thực tế (ChatGPT, Midjourney).</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Gemini / ChatGPT</td>
+                                <td>Bộ câu hỏi khảo sát</td>
+                                <td>"Đặt câu hỏi khảo sát sinh viên chi tiết cho từng phần dựa trên quy luật biện chứng"
+                                </td>
+                                <td>Bộ 13 câu hỏi nháp.</td>
+                                <td>
+                                    <ul style="padding-left: 1rem; margin: 0;">
+                                        <li>Điều chỉnh văn phong sinh viên.</li>
+                                        <li>Lọc bỏ câu quá hàn lâm.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Stitch / Midjourney</td>
+                                <td>Concept hình ảnh & UI</td>
+                                <td>"Vẽ các icon, layout cho website chủ đề AI và con người..."</td>
+                                <td>Hình ảnh minh họa, bố cục web/slide.</td>
+                                <td>
+                                    <ul style="padding-left: 1rem; margin: 0;">
+                                        <li>Chọn lọc hình ảnh thẩm mỹ.</li>
+                                        <li>Sắp xếp lại bố cục theo mạch kể chuyện.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <!-- 2. Verification -->
+                <div class="glass-panel reveal" style="transition-delay: 0.1s;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <span class="material-symbols-outlined text-neon-cyan"
+                            style="font-size: 2rem;">verified_user</span>
+                        <h3>2. Kiểm chứng (Verification)</h3>
+                    </div>
+                    <p>Nhóm nghiên cứu khẳng định đã <strong>kiểm tra chéo (cross-check)</strong> các nội dung do AI gợi
+                        ý với:</p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li
+                            style="margin-bottom: 1rem; padding-left: 1.5rem; border-left: 2px solid var(--primary-color);">
+                            <strong>Nguồn lý luận:</strong> Giáo trình Triết học Mác – Lênin (Bộ GD&ĐT) – Đảm bảo tính
+                            chính xác và chính trị.
+                        </li>
+                        <li style="padding-left: 1.5rem; border-left: 2px solid var(--secondary-color);">
+                            <strong>Nguồn số liệu:</strong> Các báo cáo thực tế (OpenAI report, tin tức uy tín) – Kiểm
+                            chứng ví dụ thực tiễn.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 3. Integrity Statement -->
+                <div class="glass-panel reveal" style="transition-delay: 0.2s;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <span class="material-symbols-outlined text-neon-red" style="font-size: 2rem;">gavel</span>
+                        <h3>3. Cam kết Liêm chính</h3>
+                    </div>
+                    <p>Chúng tôi xin cam kết:</p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.8rem; display: flex; gap: 0.8rem;">
+                            <span class="material-symbols-outlined"
+                                style="font-size: 1.2rem; color: var(--text-muted);">check_circle</span>
+                            <span><strong>AI là công cụ hỗ trợ:</strong> Chỉ dùng để gợi ý, lập dàn ý, minh họa.</span>
+                        </li>
+                        <li style="margin-bottom: 0.8rem; display: flex; gap: 0.8rem;">
+                            <span class="material-symbols-outlined"
+                                style="font-size: 1.2rem; color: var(--text-muted);">check_circle</span>
+                            <span><strong>Không sao chép nguyên văn:</strong> Mọi kết luận là tư duy độc lập của
+                                nhóm.</span>
+                        </li>
+                        <li style="display: flex; gap: 0.8rem;">
+                            <span class="material-symbols-outlined"
+                                style="font-size: 1.2rem; color: var(--text-muted);">check_circle</span>
+                            <span><strong>Chịu trách nhiệm cuối cùng:</strong> Về tính chính xác và đạo đức của nội
+                                dung.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </footer>
 
-    <style>
-        @keyframes spin {
-            from {
-                transform: translate(-50%, -50%) rotate(0deg);
-            }
+        <!-- Footer Quote -->
+        <section style="padding: 10rem 0; text-align: center;">
+            <div class="container reveal">
+                <p
+                    style="font-size: clamp(1.5rem, 4vw, 2.5rem); font-family: var(--font-heading); font-weight: 300; line-height: 1.4; color: var(--text-primary);">
+                    "Sự phát triển của AI là cơ hội để con người thực hiện bước nhảy vọt từ
+                    <span class="text-neon-cyan">vương quốc của sự tất yếu</span> sang <span
+                        class="text-neon-purple">vương
+                        quốc của sự tự do</span>."
+                </p>
+                <div style="margin-top: 4rem; color: var(--text-muted); font-size: 0.9rem;">
+                    © 2026 Dự án Triết học & Công nghệ.
+                </div>
+            </div>
+        </section>
 
-            to {
-                transform: translate(-50%, -50%) rotate(360deg);
+        <style>
+            @keyframes spin {
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(360deg);
+                }
             }
-        }
-    </style>
+        </style>
+
+        <script>
+            // Mobile Menu Toggle
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuLinks = document.querySelectorAll('.menu-link');
+
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+            });
+
+            // Close menu when link is clicked
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
+            });
+
+            // Header Scroll Effect
+            const header = document.getElementById('main-header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // Scroll Reveal Animation
+            const revealElements = document.querySelectorAll('.reveal, .timeline-item');
+
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+        </script>
 
 </body>
 
